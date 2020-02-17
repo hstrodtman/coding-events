@@ -2,7 +2,6 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
 <body class="container">
-<h1>All Events</h1>
 <nav th:replace="fragments :: navigation"></nav>
 <p th:unless="${events} and ${events.size()}">There are no events.</p>
     <table class="table table-striped">
@@ -12,6 +11,7 @@
             <th>Name</th>
             <th>Description</th>
             <th>Contact Email</th>
+            <th>Event Type</th>
         </tr>
         </thead>
         <tr th:each = "event: ${events}">
@@ -19,6 +19,7 @@
             <td th:text = "${event.name}"></td>
             <td th:text = "${event.description}"></td>
             <td th:text = "${event.contactEmail}"></td>
+            <td th:text = "${event.type.displayName}"></td>
         </tr>
     </table>
 
