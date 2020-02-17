@@ -5,10 +5,12 @@
     <title>Coding Events</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/styles.css}">
 
 </head>
 <body>
 <nav th:fragment="navigation">
+    <h1 th:text="${title}">Coding Events</h1>
 <ul class="nav">
     <li class="nav-item nav-link"><a href="/events">All Events</a></li>
     <li class="nav-item nav-link"><a href="/events/create">Create Event</a></li>
