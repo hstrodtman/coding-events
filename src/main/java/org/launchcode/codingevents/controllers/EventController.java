@@ -40,7 +40,6 @@ public class EventController {
             model.addAttribute("eventTypes", EventType.values());
             return "events/create";
         }
-
         eventRepository.save(newEvent);
         return "redirect:";
     }
