@@ -7,11 +7,7 @@ import javax.validation.constraints.NotBlank;
 import java.util.Objects;
 
 @Entity
-public class EventCategory {
-
-    @Id
-    @GeneratedValue
-    private int id;
+public class EventCategory extends AbstractEntity{
 
     @NotBlank
     private String name;
@@ -32,7 +28,4 @@ public class EventCategory {
         this.name = name;
     }
 
-    public int getId(){
-        return id;
-    }
 }
