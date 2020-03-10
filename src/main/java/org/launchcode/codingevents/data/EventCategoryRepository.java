@@ -1,5 +1,8 @@
 package org.launchcode.codingevents.data;
 
-public interface EventCategoryRepository extends EventRepository{
+import org.launchcode.codingevents.models.EventCategory;
+import org.springframework.data.repository.CrudRepository;
+
+public interface EventCategoryRepository extends CrudRepository<EventCategory, Integer> {
 
 }
