@@ -25,12 +25,13 @@
         <p class="error" th:errors="${event.contactEmail}"></p>
     </div>
     <div class="form-group">
-        <label>Event Type
-            <select th:field="${event.type}" class="form-control">
-                <option th:each="type : ${eventTypes}"
-                        th:value="${type}"
-                        th:text="${type.displayName}"
+        <label>Category
+            <select th:field="${event.eventCategory}" class="form-control">
+                <option th:each="eventCategory : ${categories}"
+                        th:value="${eventCategory.id}"
+                        th:text="${eventCategory.name}"
                 ></option>
+                <p class ="error" th:errors="${event.eventCategory}"></p>
             </select>
         </label>
         <p class="error" th:errors="${event.contactEmail}"></p>

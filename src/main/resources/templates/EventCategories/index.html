@@ -9,7 +9,7 @@
 <table class="table table-striped">
     <th>Category Name</th>
     <tr th:each = "category : ${categories}">
-        <td th:text = "${category.name}"></td>
+        <td><a th:text = "${category.name}" th:href="'/events?categoryId=' + ${category.id}"></a></td>
     </tr>
 </table>
 </body>
